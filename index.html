@@ -286,6 +286,9 @@ body{background:#fff;font-family:Arial,Helvetica,sans-serif}section{scroll-margi
 @media(max-width:850px){.contact-grid{grid-template-columns:1fr;gap:32px}.contact-copy{position:static}.hero{padding:75px 0}.nav{min-height:74px}.steps{grid-template-columns:repeat(2,1fr)}.building{grid-template-columns:1fr 1fr;gap:23px}}
 @media(max-width:520px){section{padding:58px 0}.hero h1{letter-spacing:-1.6px;font-size:3.1rem}.hero{padding:60px 0}.trustline{gap:10px;margin-top:30px;flex-direction:column}.intro-strip .wrap{gap:10px;font-size:.65rem}.brand{font-size:1.08rem}.nav .cta{padding:10px 12px;font-size:.8rem}.building{grid-template-columns:1fr;gap:0}.building img{height:190px;min-height:0}.building>div{padding:24px}.contact-form{padding:23px 18px}.field-pair{grid-template-columns:1fr;gap:0}.hero-actions .cta{width:100%}.steps{grid-template-columns:1fr}.foot{flex-direction:column}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}.cta:hover{transform:none}}
+
+/* Consentement aux statistiques : aucun chargement Analytics avant accord. */
+.cookie-banner{position:fixed;bottom:16px;left:16px;right:16px;max-width:680px;margin:auto;background:#fff;color:#172b3b;border:1px solid #bdcdd6;box-shadow:0 12px 45px #071e3060;border-radius:9px;padding:20px;z-index:9999}.cookie-banner[hidden]{display:none}.cookie-banner p{margin:6px 0 14px;font-size:.92rem}.cookie-actions{display:flex;gap:10px;flex-wrap:wrap}.cookie-actions button,.privacy-settings{font:inherit;padding:10px 15px;cursor:pointer;border-radius:4px;border:1px solid #122e40;background:white;color:#122e40}.cookie-actions .accept{background:#122e40;color:white}.privacy-settings{font-size:.82rem;padding:5px 8px;border-color:#789}.privacy-note{font-size:.82rem;color:#d1e0e8;margin-top:10px}
 </style>
 </head>
 <body><a class="skip" href="#contenu">Aller au contenu</a><header>
@@ -435,13 +438,42 @@ body{background:#fff;font-family:Arial,Helvetica,sans-serif}section{scroll-margi
 </form></div></section>
 </main>
 
-<footer>
+<aside class="cookie-banner" id="cookie-banner" hidden role="dialog" aria-label="Choix des cookies statistiques"><strong>Mesure d'audience</strong><p>Avec votre accord, StockValor utilise Google Analytics pour comprendre les visites du site. Vous pouvez refuser sans conséquence sur la navigation et changer d'avis à tout moment. <a href="#confidentialite">En savoir plus</a>.</p><div class="cookie-actions"><button type="button" id="cookie-refuse">Refuser</button><button type="button" class="accept" id="cookie-accept">Accepter les statistiques</button></div></aside><footer>
   <div class="wrap foot">
     <strong>STOCKVALOR</strong>
     <span>La valorisation intelligente des stocks professionnels.</span>
-    <span>© 2026 StockValor</span>
+    <span>© 2026 StockValor</span><button type="button" class="privacy-settings" id="cookie-settings">Gérer les cookies</button>
   </div>
-</footer>
+</footer><section id="confidentialite" class="soft" style="padding:25px 0"><div class="wrap"><h2 style="font-size:1.3rem">Confidentialité et mesure d'audience</h2><p>StockValor utilise Google Analytics uniquement si vous acceptez les cookies statistiques. Le service mesure notamment les pages consultées et la provenance des visites. Le refus n'empêche pas d'utiliser le site. Vous pouvez retirer votre accord à tout moment avec « Gérer les cookies » en pied de page. Les données de mesure sont traitées par Google conformément à ses conditions et à sa politique de confidentialité. Contact : <a href="mailto:contact.stockvalor@gmail.com">contact.stockvalor@gmail.com</a>.</p></div></section>
 <script src="assets/contact.js" defer></script>
+<script>
+(function(){
+  'use strict';
+  const measurementId='G-VN9KC6QJ5T';
+  const storageKey='stockvalor_analytics_consent_v1';
+  const banner=document.getElementById('cookie-banner');
+  function readConsent(){try{return localStorage.getItem(storageKey)}catch(e){return null}}
+  function saveConsent(value){try{localStorage.setItem(storageKey,value)}catch(e){}}
+  let loaded=false;
+  function enableAnalytics(){
+    if(loaded)return;
+    loaded=true;
+    window.dataLayer=window.dataLayer||[];
+    window.gtag=function(){window.dataLayer.push(arguments)};
+    window.gtag('js',new Date());
+    window.gtag('config',measurementId);
+    const script=document.createElement('script');
+    script.async=true;
+    script.src='https://www.googletagmanager.com/gtag/js?id='+encodeURIComponent(measurementId);
+    document.head.appendChild(script);
+  }
+  function choose(value){saveConsent(value);banner.hidden=true;if(value==='accepted')enableAnalytics();else if(loaded)window.location.reload()}
+  document.getElementById('cookie-accept').addEventListener('click',function(){choose('accepted')});
+  document.getElementById('cookie-refuse').addEventListener('click',function(){choose('refused')});
+  document.getElementById('cookie-settings').addEventListener('click',function(){banner.hidden=false});
+  const consent=readConsent();
+  if(consent==='accepted')enableAnalytics();else if(consent!=='refused')banner.hidden=false;
+})();
+</script>
 </body>
 </html>
