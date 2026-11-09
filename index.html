@@ -313,19 +313,32 @@ footer{background:#101317;border-top:3px solid #f58000}.cookie-actions .accept{b
 @media(max-width:520px){.opportunities-photo{margin:-24px -24px 18px}}
 /* Cartes B2B : visuels plus compacts et lecture mobile facilitée. */
 #opportunites .card{padding:18px}#opportunites .opportunities-photo{width:calc(100% + 36px);margin:-18px -18px 12px;height:145px;object-fit:cover}#opportunites .symbol{width:34px;height:34px;font-size:.72rem}#opportunites .card h3{margin:10px 0 5px}#opportunites .card p{line-height:1.55}#opportunites .cards{gap:14px}@media(max-width:520px){#opportunites .card{padding:16px}#opportunites .opportunities-photo{width:calc(100% + 32px);margin:-16px -16px 10px;height:160px}#opportunites .card h3{margin:8px 0 4px}}
+
+.menu-toggle{display:none;border:1px solid #ff8200;background:transparent;border-radius:5px;width:44px;height:44px;cursor:pointer;padding:10px;align-items:center;justify-content:center;flex-direction:column;gap:5px}
+.menu-toggle span{width:21px;height:2px;background:#ff8200;display:block}
+.mobile-menu[hidden]{display:none!important}
+.mobile-menu{background:#15191e;border-top:1px solid #48403a;padding:8px 20px 18px;display:flex;flex-direction:column}
+.mobile-menu a{color:#fff;text-decoration:none;font-weight:700;padding:12px 6px;border-bottom:1px solid #393b3d}
+.mobile-menu a:last-child{color:#ff920d}
+#opportunites .opportunities-photo{height:170px;aspect-ratio:8/5;object-fit:cover}
+#opportunites .card{display:flex;flex-direction:column}
+#opportunites .card p{flex:1}
+@media(max-width:850px){.menu-toggle{display:flex}.links a:not(.cta){display:none}.nav{gap:10px}.links{margin-left:auto}.hero{padding:58px 0 50px}.hero h1{font-size:clamp(2.6rem,9vw,4rem)}}
+@media(max-width:520px){.hero{padding:48px 0 44px}.hero h1{font-size:clamp(2.65rem,11vw,3.1rem);line-height:1.09;margin:18px 0}.hero p{line-height:1.55;margin-bottom:20px}.hero .trustline{margin-top:20px}.hero-actions{gap:10px}.nav{min-height:68px}.brand{font-size:1.04rem;letter-spacing:0}.links .cta{min-height:44px;padding:9px 11px}section{padding:48px 0}}
 </style>
 </head>
 <body><a class="skip" href="#contenu">Aller au contenu</a><header>
   <div class="wrap nav">
     <a class="brand" href="#">STOCK<span>VALOR</span></a>
-    <nav class="links" aria-label="Navigation principale">
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation-mobile" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button><nav class="links" aria-label="Navigation principale">
       <a href="#mission">Notre mission</a>
-      <a href="#secteurs">Secteurs</a>
+      <a href="#opportunites">Secteurs</a>
       <a href="#opportunites">Opportunités B2B</a>
       <a href="#methode">Notre méthode</a>
       <a class="cta dark" href="#contact">Nous contacter</a>
     </nav>
   </div>
+  <nav class="mobile-menu" id="navigation-mobile" aria-label="Navigation mobile" hidden><a href="#comment-ca-marche">Comment ça marche</a><a href="#opportunites">Opportunités B2B</a><a href="#mission">Notre mission</a><a href="#questions">Questions fréquentes</a><a href="#contact">Nous contacter</a></nav>
 </header>
 
 <main id="contenu">
@@ -358,8 +371,8 @@ footer{background:#101317;border-top:3px solid #f58000}.cookie-actions .accept{b
 <section id="mission">
   <div class="wrap">
     <div class="section-kicker">Notre mission</div>
-    <h2>Créer des opportunités à partir des stocks disponibles.</h2>
-    <p class="intro">Des marchandises ou équipements immobilisés dans une entreprise peuvent intéresser d'autres professionnels. Notre rôle consiste à identifier ces opportunités et à faciliter le contact entre les entreprises détentrices de stocks et des acheteurs potentiels.</p>
+    <h2>Donner une nouvelle valeur à vos stocks, sans complexifier votre activité.</h2>
+    <p class="intro">Vous avez des invendus, des surplus ou des équipements immobilisés ? Nous étudions vos lots, recherchons des acheteurs professionnels adaptés et facilitons une mise en relation confidentielle, sans acheter ni stocker les marchandises.</p>
 
     <div class="cards">
       <article class="card">
@@ -390,7 +403,7 @@ footer{background:#101317;border-top:3px solid #f58000}.cookie-actions .accept{b
   <div class="wrap">
     <div class="section-kicker">Opportunités entre professionnels</div>
     <h2 id="opportunites-titre">Des secteurs variés, des recherches ciblées.</h2>
-    <p class="intro">StockValor étudie les propositions de lots et les demandes d'achat dans plusieurs secteurs. Les catégories ci-dessous illustrent notre périmètre d'intervention : elles ne constituent pas un catalogue de stocks dont la disponibilité serait garantie.</p>
+    <p class="intro">Jeux, électroménager, automobile, hygiène professionnelle et autres secteurs : nous étudions les lots et les besoins d’achat au cas par cas. Ces visuels illustrent nos domaines d’intervention et ne constituent pas un catalogue de marchandises disponibles.</p>
     <div class="cards">
       <article class="card"><img class="opportunities-photo" src="assets/stockvalor-jouets.jpg" alt="Illustration d'un environnement de stockage professionnel ; photo non contractuelle" loading="lazy" width="800" height="500"><div class="symbol" aria-hidden="true">01</div><h3>Jeux & jouets</h3><p>Puzzles, jeux de société, jouets et accessoires, selon les lots proposés et les autorisations de diffusion.</p></article>
       <article class="card"><img class="opportunities-photo" src="assets/stockvalor-electromenager.jpg" alt="Illustration d'un environnement de stockage professionnel ; photo non contractuelle" loading="lazy" width="800" height="500"><div class="symbol" aria-hidden="true">02</div><h3>Électroménager & chauffage</h3><p>Petits équipements, appareils et fins de série à étudier.</p></article>
@@ -404,51 +417,6 @@ footer{background:#101317;border-top:3px solid #f58000}.cookie-actions .accept{b
     <p class="opportunities-note">Confidentialité : aucune identité de fournisseur, coordonnée ou détail de lot confidentiel n'est publié sans autorisation. Toute disponibilité doit être confirmée avant mise en relation.</p>
   </div>
 </section>
-<section class="soft" id="secteurs">
-  <div class="wrap">
-    <div class="section-kicker">Nos domaines d'intervention</div>
-    <h2>Des stocks concrets.<br>Des débouchés à explorer.</h2>
-    <p class="intro">Nous étudions chaque opportunité selon les références, les quantités, l'état des produits et les besoins du marché.</p>
-
-    <div class="cards">
-      <article class="card">
-        <img class="sector-photo" src="assets/entrepot.jpg" alt="Rayonnages de stockage en entrepôt professionnel" width="800" height="500" loading="lazy">
-        <h3>Industrie & pièces techniques</h3>
-        <p>Composants, automatismes, roulements, moteurs et équipements professionnels.</p>
-      </article>
-      <article class="card">
-        <div class="symbol" aria-hidden="true">02</div>
-        <h3>Automobile</h3>
-        <p>Pièces détachées, accessoires et équipements automobiles.</p>
-      </article>
-      <article class="card">
-        <div class="symbol" aria-hidden="true">03</div>
-        <h3>Sport & équipements</h3>
-        <p>Matériel sportif, accessoires et équipements spécialisés.</p>
-      </article>
-      <article class="card">
-        <div class="symbol" aria-hidden="true">04</div>
-        <h3>Nutrition sportive</h3>
-        <p>Whey, créatine et compléments, sous réserve de conformité et de traçabilité.</p>
-      </article>
-    </div>
-    <article class="building"><img src="assets/chantier.jpg" alt="Équipements et structures sur un chantier de bâtiment" width="800" height="500" loading="lazy"><div><div class="section-kicker">Bâtiment & matériel professionnel</div><h3>Les surplus de chantier aussi ont leur place.</h3><p>Outillage, matériaux, fournitures et équipements : présentez les références et volumes disponibles pour étudier une mise en relation.</p><a href="#contact" data-intent="vendeur">Présenter mon lot <span aria-hidden="true">↗</span></a></div></article>
-<p class="intro" style="margin-top:22px">D'autres secteurs peuvent également être étudiés selon les opportunités. Les photos illustrent nos domaines d'intervention ; elles ne représentent pas des lots disponibles à la vente.</p>
-  </div>
-</section><section id="methode">
-  <div class="wrap">
-    <div class="section-kicker">Notre méthode</div>
-    <h2>Un processus simple et transparent.</h2>
-    <div class="steps">
-      <article class="step"><div class="num">01</div><h3>Échange initial</h3><p>Vous présentez votre stock et vos objectifs.</p></article>
-      <article class="step"><div class="num">02</div><h3>Étude</h3><p>Nous examinons les références, volumes et contraintes.</p></article>
-      <article class="step"><div class="num">03</div><h3>Recherche</h3><p>Nous identifions des acheteurs professionnels potentiels.</p></article>
-      <article class="step"><div class="num">04</div><h3>Mise en relation</h3><p>Nous facilitons les échanges entre les parties.</p></article>
-      <article class="step"><div class="num">05</div><h3>Accord</h3><p>Un accord écrit encadre la mission, la commission et ses modalités avant toute transaction.</p></article>
-    </div>
-  </div>
-</section>
-
 <section class="soft">
   <div class="wrap split">
     <div>
@@ -497,10 +465,20 @@ footer{background:#101317;border-top:3px solid #f58000}.cookie-actions .accept{b
   <div class="wrap foot">
     <strong>STOCKVALOR</strong>
     <span>La valorisation intelligente des stocks professionnels.</span>
-    <span>© 2026 StockValor</span><button type="button" class="privacy-settings" id="cookie-settings">Gérer les cookies</button>
+    <span>© 2026 StockValor</span><a href="#confidentialite">Confidentialité</a><button type="button" class="privacy-settings" id="cookie-settings">Gérer les cookies</button>
   </div>
 </footer><section id="confidentialite" class="soft" style="padding:25px 0"><div class="wrap"><h2 style="font-size:1.3rem">Confidentialité et mesure d'audience</h2><p>StockValor utilise Google Analytics uniquement si vous acceptez les cookies statistiques. Le service mesure notamment les pages consultées et la provenance des visites. Le refus n'empêche pas d'utiliser le site. Vous pouvez retirer votre accord à tout moment avec « Gérer les cookies » en pied de page. Les données de mesure sont traitées par Google conformément à ses conditions et à sa politique de confidentialité. Contact : <a href="mailto:contact.stockvalor@gmail.com">contact.stockvalor@gmail.com</a>.</p></div></section>
-<script src="assets/contact.js" defer></script>
+<script src="assets/contact.js" defer></script><script>
+(function(){
+ const button=document.getElementById('menu-toggle'),menu=document.getElementById('navigation-mobile');
+ if(!button||!menu)return;
+ function close(){menu.hidden=true;button.setAttribute('aria-expanded','false');button.setAttribute('aria-label','Ouvrir le menu')}
+ button.addEventListener('click',function(){const open=menu.hidden;menu.hidden=!open;button.setAttribute('aria-expanded',String(open));button.setAttribute('aria-label',open?'Fermer le menu':'Ouvrir le menu')});
+ menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close)});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+})();
+</script>
+
 <script>
 (function(){
   'use strict';
