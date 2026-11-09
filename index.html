@@ -293,6 +293,7 @@ body{background:#fff;font-family:Arial,Helvetica,sans-serif}section{scroll-margi
 @media(max-width:520px){.steps-three{grid-template-columns:1fr}.trustline{color:#f0f5f8}}
 /* Consentement aux statistiques : aucun chargement Analytics avant accord. */
 .cookie-banner{position:fixed;bottom:16px;left:16px;right:16px;max-width:680px;margin:auto;background:#fff;color:#172b3b;border:1px solid #bdcdd6;box-shadow:0 12px 45px #071e3060;border-radius:9px;padding:20px;z-index:9999}.cookie-banner[hidden]{display:none}.cookie-banner p{margin:6px 0 14px;font-size:.92rem}.cookie-actions{display:flex;gap:10px;flex-wrap:wrap}.cookie-actions button,.privacy-settings{font:inherit;padding:10px 15px;cursor:pointer;border-radius:4px;border:1px solid #122e40;background:white;color:#122e40}.cookie-actions .accept{background:#122e40;color:white}.privacy-settings{font-size:.82rem;padding:5px 8px;border-color:#789}.privacy-note{font-size:.82rem;color:#d1e0e8;margin-top:10px}
+.cta.secondary{background:#edf3f4;color:var(--navy);border:1px solid #a9c1cd}.opportunities-actions{margin-top:28px}.opportunities-note{font-size:.85rem;color:var(--muted);max-width:790px;margin-top:20px}.opportunities-actions .cta{min-width:220px}@media(max-width:520px){.opportunities-actions .cta{width:100%}}
 </style>
 </head>
 <body><a class="skip" href="#contenu">Aller au contenu</a><header>
@@ -301,6 +302,7 @@ body{background:#fff;font-family:Arial,Helvetica,sans-serif}section{scroll-margi
     <nav class="links" aria-label="Navigation principale">
       <a href="#mission">Notre mission</a>
       <a href="#secteurs">Secteurs</a>
+      <a href="#opportunites">Opportunités B2B</a>
       <a href="#methode">Notre méthode</a>
       <a class="cta dark" href="#contact">Nous contacter</a>
     </nav>
@@ -314,8 +316,8 @@ body{background:#fff;font-family:Arial,Helvetica,sans-serif}section{scroll-margi
     <h1>Vos stocks dorment.<br><span class="accent">Leur valeur, non.</span></h1>
     <p>StockValor met en relation les entreprises souhaitant valoriser leurs stocks dormants, surplus et invendus avec des acheteurs professionnels.</p>
     <div class="hero-actions">
-      <a class="cta light" href="#contact" data-intent="vendeur">Présenter mon stock</a>
-      <a class="cta outline" href="#contact" data-intent="acheteur">Je recherche un stock <span aria-hidden="true">↗</span></a>
+      <a class="cta light" href="#contact" data-intent="vendeur">Vendre un stock</a>
+      <a class="cta outline" href="#contact" data-intent="acheteur">Acheter un stock <span aria-hidden="true">↗</span></a>
     </div>
     <div class="trustline"><span>Réservé aux professionnels</span><span>Sans achat ni stockage par StockValor</span><span>Modalités d’intervention précisées avant engagement</span></div>
   </div>
@@ -359,12 +361,30 @@ body{background:#fff;font-family:Arial,Helvetica,sans-serif}section{scroll-margi
       <article class="card">
         <div class="symbol">04</div>
         <h3>Une commission transparente</h3>
-        <p>Notre proposition commerciale repose sur une commission de 8 %, dont l'assiette, le déclenchement et les modalités sont précisés dans un accord écrit préalable.</p>
+        <p>Notre taux de référence est de 8 % HT sur les transactions réalisées grâce à notre intermédiation, selon les conditions définies par écrit avant la transaction. Aucune commission n’est due en l’absence de vente.</p>
       </article>
     </div>
   </div>
 </section>
 
+<section id="opportunites" aria-labelledby="opportunites-titre">
+  <div class="wrap">
+    <div class="section-kicker">Opportunités entre professionnels</div>
+    <h2 id="opportunites-titre">Des secteurs variés, des recherches ciblées.</h2>
+    <p class="intro">StockValor étudie les propositions de lots et les demandes d'achat dans plusieurs secteurs. Les catégories ci-dessous illustrent notre périmètre d'intervention : elles ne constituent pas un catalogue de stocks dont la disponibilité serait garantie.</p>
+    <div class="cards">
+      <article class="card"><div class="symbol" aria-hidden="true">01</div><h3>Jeux & jouets</h3><p>Puzzles, jeux de société, jouets et accessoires, selon les lots proposés et les autorisations de diffusion.</p></article>
+      <article class="card"><div class="symbol" aria-hidden="true">02</div><h3>Électroménager & chauffage</h3><p>Petits équipements, appareils et fins de série à étudier.</p></article>
+      <article class="card"><div class="symbol" aria-hidden="true">03</div><h3>Pièces automobiles</h3><p>Références, accessoires et stocks de pièces destinés aux professionnels.</p></article>
+      <article class="card"><div class="symbol" aria-hidden="true">04</div><h3>Hygiène & entretien pro</h3><p>Consommables et fournitures professionnels, sous réserve de conformité.</p></article>
+    </div>
+    <div class="hero-actions opportunities-actions">
+      <a class="cta dark" href="#contact" data-intent="acheteur">Décrire mon besoin d'achat</a>
+      <a class="cta secondary" href="#contact" data-intent="vendeur">Proposer un lot</a>
+    </div>
+    <p class="opportunities-note">Confidentialité : aucune identité de fournisseur, coordonnée ou détail de lot confidentiel n'est publié sans autorisation. Toute disponibilité doit être confirmée avant mise en relation.</p>
+  </div>
+</section>
 <section class="soft" id="secteurs">
   <div class="wrap">
     <div class="section-kicker">Nos domaines d'intervention</div>
@@ -432,7 +452,7 @@ body{background:#fff;font-family:Arial,Helvetica,sans-serif}section{scroll-margi
 
 <section class="soft faq" id="questions"><div class="wrap"><div class="section-kicker">Vos questions</div><h2>Un cadre clair dès le départ.</h2>
 <details><summary>StockValor achète-t-il les marchandises ?</summary><p>Nous intervenons comme intermédiaire entre professionnels. Les marchandises restent chez leur détenteur jusqu'à ce que les parties conviennent des conditions de l'opération.</p></details>
-<details><summary>Comment fonctionne la rémunération ?</summary><p>StockValor propose une commission de 8 % dans le cadre de son activité d'intermédiation B2B. Son assiette, la partie redevable, le fait générateur et les modalités de paiement sont précisés dans un accord écrit signé avant toute intervention. Une simple demande de contact ne crée aucun engagement financier.</p></details>
+<details><summary>Comment fonctionne la rémunération ?</summary><p>Le taux de référence est de 8 % HT sur une transaction conclue grâce à notre intermédiation. L’assiette, la partie redevable et les modalités sont convenues par écrit avant la transaction. Aucune commission n’est due si la vente ne se réalise pas. Une simple prise de contact n’engage à aucun paiement.</p></details>
 <details><summary>Quelles informations préparer ?</summary><p>Les références, les quantités, l'état des produits, leur localisation et votre objectif de prix. Des photos ou un inventaire peuvent ensuite être joints à votre email.</p></details>
 <details><summary>La vente du stock est-elle garantie ?</summary><p>Chaque lot fait l'objet d'une étude. La mise en relation et la vente dépendent notamment de la demande, des références, de l'état et des conditions proposées.</p></details>
 </div></section>
