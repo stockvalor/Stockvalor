@@ -1,0 +1,24 @@
+/* StockValor — finition visuelle progressive, sans remplacement du design existant */
+:root{--sv-orange:#f58000;--sv-dark:#15191e;--sv-border:#e8e4df}
+body{-webkit-font-smoothing:antialiased}
+header{box-shadow:0 3px 18px rgba(12,16,20,.09)}
+.nav .links a:not(.cta){transition:color .2s ease}
+.nav .links a:not(.cta):hover{color:#ff9d37}
+.hero{isolation:isolate}
+.hero h1{text-wrap:balance}
+.hero p{text-wrap:pretty}
+.hero-actions .cta,.opportunities-actions .cta{transition:transform .22s ease,box-shadow .22s ease,background-color .22s ease}
+.hero-actions .cta:hover,.opportunities-actions .cta:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,.2)}
+section h2{text-wrap:balance}
+#mission .card,#opportunites .card{transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+#mission .card:hover,#opportunites .card:hover{transform:translateY(-4px);border-color:#edab63;box-shadow:0 12px 30px rgba(20,25,30,.09)}
+#opportunites .opportunities-photo{transition:transform .45s ease}
+#opportunites .card:hover .opportunities-photo{transform:scale(1.025)}
+#opportunites .card{isolation:isolate}
+#comment-ca-marche .step{transition:box-shadow .25s ease,transform .25s ease}
+#comment-ca-marche .step:hover{box-shadow:0 9px 26px rgba(20,25,30,.07);transform:translateY(-3px)}
+.contact-form{box-shadow:0 18px 50px rgba(0,0,0,.13)}
+.contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{outline:2px solid #e87900;outline-offset:2px;border-color:#e87900}
+.faq details summary:hover{color:#bd5e00}
+@media(max-width:520px){.hero h1{text-wrap:balance}#mission .card,#opportunites .card{box-shadow:0 4px 18px rgba(20,25,30,.04)}.contact-form{box-shadow:none}.hero-actions .cta{white-space:normal;text-align:center}}
+@media(prefers-reduced-motion:reduce){#mission .card,#opportunites .card,#opportunites .opportunities-photo,#comment-ca-marche .step,.hero-actions .cta,.opportunities-actions .cta{transition:none!important;transform:none!important}}
