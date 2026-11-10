@@ -4,9 +4,9 @@
 <meta name="google-site-verification" content="Ddzkp6ervBMLV6LbgYSFijjOGcbL2KzyXZbQT5sjkzc">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="StockValor accompagne les entreprises dans la valorisation de leurs stocks dormants, invendus, surplus et équipements inutilisés. Mise en relation B2B en France.">
+<meta name="description" content="Vendez vos stocks dormants, invendus et surplus professionnels. StockValor met en relation vendeurs et acheteurs B2B, sans achat ni stockage de marchandises.">
 <meta name="theme-color" content="#15191e">
-<title>StockValor — Stocks dormants, surplus et invendus professionnels</title>
+<title>Déstockage professionnel et stocks dormants | StockValor</title>
 <link rel="canonical" href="https://stockvalor.fr/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
@@ -378,6 +378,20 @@ header .nav{min-height:64px}
 @media(max-width:850px){.hero{min-height:650px;padding:70px 0;background-position:58% center;background-image:linear-gradient(90deg,rgba(12,15,19,.79),rgba(12,15,19,.38) 62%,rgba(12,15,19,.12)),url('assets/entrepot.jpg')}}
 @media(max-width:520px){header .nav{min-height:60px}.hero{min-height:calc(88svh - 60px);padding:50px 0 65px;align-items:flex-end;background-position:60% center;background-image:linear-gradient(0deg,rgba(12,15,19,.89) 0%,rgba(12,15,19,.66) 37%,rgba(12,15,19,.07) 82%),url('assets/entrepot.jpg')}.hero .wrap{width:calc(100% - 36px)}.hero h1{font-size:clamp(2.3rem,9vw,3.05rem);margin:0 0 15px}.hero p{font-size:.98rem;line-height:1.5;margin-bottom:19px}.hero-actions{gap:9px}.hero-actions .cta{min-height:46px}.hero-actions .cta{width:auto;flex:1;padding:10px 9px;font-size:.87rem;white-space:nowrap}}
 @media(max-width:360px){.hero-actions{flex-direction:column}.hero-actions .cta{width:100%}}
+
+/* Améliorations visuelles progressives : identité StockValor conservée. */
+.hero .hero-content{max-width:620px}.hero h1{max-width:620px;text-wrap:balance}.hero p{max-width:560px}
+.hero-actions .cta{transition:transform .2s ease,box-shadow .2s ease}
+.hero-actions .cta:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.22)}
+.hero-actions .cta:focus-visible{outline:3px solid #fff;outline-offset:4px}
+.hero-proof{display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:25px;color:#f4f4f4;font-size:.83rem;font-weight:600}
+.hero-proof span::before{content:'✓';color:#ffa54b;margin-right:7px}
+#comment-ca-marche .step,#mission .card,#opportunites .card{transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+#comment-ca-marche .step:hover,#mission .card:hover,#opportunites .card:hover{transform:translateY(-4px);box-shadow:0 14px 35px rgba(22,26,30,.1)}
+#opportunites .opportunities-photo{transition:transform .4s ease}
+#opportunites .card:hover .opportunities-photo{transform:scale(1.025)}
+@media(max-width:520px){.hero-proof{font-size:.75rem;gap:8px 12px;margin-top:18px}.hero h1{text-wrap:pretty}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}#opportunites .card:hover .opportunities-photo{transform:none}}
 </style>
 </head>
 <body><a class="skip" href="#contenu">Aller au contenu</a><header>
@@ -403,6 +417,7 @@ header .nav{min-height:64px}
       <a class="cta light" href="#contact" data-intent="vendeur">Vendre un stock</a>
       <a class="cta outline" href="#contact" data-intent="acheteur">Acheter un stock</a>
     </div>
+    <div class="hero-proof" aria-label="Notre approche"><span>Professionnels uniquement</span><span>Sans achat ni stockage</span><span>Mise en relation confidentielle</span></div>
   </div></div>
 </section>
 
