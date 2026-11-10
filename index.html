@@ -325,6 +325,46 @@ footer{background:#101317;border-top:3px solid #f58000}.cookie-actions .accept{b
 #opportunites .card p{flex:1}
 @media(max-width:850px){.menu-toggle{display:flex}.links a:not(.cta){display:none}.nav{gap:10px}.links{margin-left:auto}.hero{padding:58px 0 50px}.hero h1{font-size:clamp(2.6rem,9vw,4rem)}}
 @media(max-width:520px){.hero{padding:48px 0 44px}.hero h1{font-size:clamp(2.65rem,11vw,3.1rem);line-height:1.09;margin:18px 0}.hero p{line-height:1.55;margin-bottom:20px}.hero .trustline{margin-top:20px}.hero-actions{gap:10px}.nav{min-height:68px}.brand{font-size:1.04rem;letter-spacing:0}.links .cta{min-height:44px;padding:9px 11px}section{padding:48px 0}}
+
+/* Optimisation premium de la première impression — responsive, sans modifier les autres sections. */
+header .nav{min-height:72px;gap:18px}
+header .brand{font-size:1.24rem;letter-spacing:-.35px;white-space:nowrap}
+header .links .cta.dark{min-height:43px;padding:10px 17px;font-size:.88rem;font-weight:700}
+.hero{background-image:linear-gradient(90deg,rgba(12,15,19,.96) 0%,rgba(12,15,19,.88) 38%,rgba(12,15,19,.63) 72%,rgba(12,15,19,.42) 100%),url('assets/entrepot.jpg');padding:92px 0 82px}
+.hero .eyebrow{font-size:.76rem;letter-spacing:2.1px;line-height:1.65}
+.hero h1{font-size:clamp(2.8rem,5.4vw,4.65rem);letter-spacing:-2.1px;line-height:1.12;max-width:800px;margin:21px 0 24px}
+.hero p{max-width:650px;font-size:1.08rem;line-height:1.65;color:#f0f0f0;margin-bottom:27px}
+.hero-actions{gap:12px}
+.hero-actions .cta{min-height:51px;padding:12px 23px;font-size:.98rem}
+.hero .trustline{margin-top:29px;gap:12px 24px;line-height:1.5}
+@media(max-width:850px){
+ header .nav{min-height:66px;gap:12px}
+ header .brand{font-size:1.13rem}
+ header .menu-toggle{width:40px;height:40px;padding:8px}
+ header .links .cta.dark{min-height:40px;padding:9px 12px}
+ .hero{padding:63px 0 59px}
+ .hero h1{font-size:clamp(2.65rem,7.2vw,3.65rem)}
+}
+@media(max-width:520px){
+ header .nav{min-height:61px;gap:9px}
+ header .brand{font-size:clamp(.99rem,4.4vw,1.12rem)}
+ header .menu-toggle{width:38px;height:38px;flex-shrink:0}
+ header .links{margin-left:auto}
+ header .links .cta.dark{font-size:.76rem;padding:8px 10px;min-height:38px;white-space:nowrap}
+ .hero{padding:39px 0 42px;background-image:linear-gradient(90deg,rgba(12,15,19,.94),rgba(12,15,19,.76) 65%,rgba(12,15,19,.57)),url('assets/entrepot.jpg');background-position:55% center}
+ .hero .eyebrow{font-size:.69rem;letter-spacing:1.5px;line-height:1.55}
+ .hero h1{font-size:clamp(2.3rem,9.3vw,3rem);letter-spacing:-1.4px;line-height:1.12;margin:18px 0 22px}
+ .hero p{font-size:1rem;line-height:1.58;margin-bottom:22px}
+ .hero-actions{gap:10px}
+ .hero-actions .cta{min-height:49px;padding:11px 15px;font-size:.98rem}
+ .hero .trustline{margin-top:22px;gap:10px;font-size:.8rem}
+}
+@media(max-width:360px){
+ header .brand{font-size:.94rem}
+ header .links .cta.dark{font-size:.7rem;padding:8px}
+ .hero h1{font-size:2.2rem}
+}
+
 </style>
 </head>
 <body><a class="skip" href="#contenu">Aller au contenu</a><header>
@@ -346,7 +386,7 @@ footer{background:#101317;border-top:3px solid #f58000}.cookie-actions .accept{b
   <div class="wrap">
     <div class="eyebrow">StockValor · Intermédiation commerciale B2B · France</div>
     <h1>Vos stocks dorment.<br><span class="accent">Leur valeur, non.</span></h1>
-    <p>StockValor met en relation les entreprises souhaitant valoriser leurs stocks dormants, surplus et invendus avec des acheteurs professionnels.</p>
+    <p>StockValor accompagne les entreprises dans la valorisation de leurs stocks dormants, surplus et invendus, en les mettant en relation avec des acheteurs professionnels qualifiés.</p>
     <div class="hero-actions">
       <a class="cta light" href="#contact" data-intent="vendeur">Vendre un stock</a>
       <a class="cta outline" href="#contact" data-intent="acheteur">Acheter un stock <span aria-hidden="true">↗</span></a>
