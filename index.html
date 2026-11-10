@@ -365,6 +365,19 @@ header .links .cta.dark{min-height:43px;padding:10px 17px;font-size:.88rem;font-
  .hero h1{font-size:2.2rem}
 }
 
+
+/* Accueil épuré : photographie d'entrepôt mise au premier plan. */
+header .nav{min-height:64px}
+.hero{min-height:clamp(570px,78vh,790px);display:flex;align-items:center;padding:82px 0;background-image:linear-gradient(90deg,rgba(12,15,19,.84) 0%,rgba(12,15,19,.54) 38%,rgba(12,15,19,.10) 76%,rgba(12,15,19,.04) 100%),url('assets/entrepot.jpg');background-position:center center}
+.hero .wrap{width:min(1120px,calc(100% - 40px))}
+.hero .hero-content{max-width:550px}
+.hero h1{max-width:540px;font-size:clamp(2.8rem,5vw,4.3rem);line-height:1.1;margin:0 0 20px}
+.hero p{max-width:490px;font-size:1.06rem;line-height:1.6;margin:0 0 27px}
+.hero .eyebrow,.hero .trustline{display:none}
+.hero-actions .cta{min-height:48px}
+@media(max-width:850px){.hero{min-height:650px;padding:70px 0;background-position:58% center;background-image:linear-gradient(90deg,rgba(12,15,19,.79),rgba(12,15,19,.38) 62%,rgba(12,15,19,.12)),url('assets/entrepot.jpg')}}
+@media(max-width:520px){header .nav{min-height:60px}.hero{min-height:calc(88svh - 60px);padding:50px 0 65px;align-items:flex-end;background-position:60% center;background-image:linear-gradient(0deg,rgba(12,15,19,.89) 0%,rgba(12,15,19,.66) 37%,rgba(12,15,19,.07) 82%),url('assets/entrepot.jpg')}.hero .wrap{width:calc(100% - 36px)}.hero h1{font-size:clamp(2.3rem,9vw,3.05rem);margin:0 0 15px}.hero p{font-size:.98rem;line-height:1.5;margin-bottom:19px}.hero-actions{gap:9px}.hero-actions .cta{min-height:46px}.hero-actions .cta{width:auto;flex:1;padding:10px 9px;font-size:.87rem;white-space:nowrap}}
+@media(max-width:360px){.hero-actions{flex-direction:column}.hero-actions .cta{width:100%}}
 </style>
 </head>
 <body><a class="skip" href="#contenu">Aller au contenu</a><header>
@@ -382,17 +395,15 @@ header .links .cta.dark{min-height:43px;padding:10px 17px;font-size:.88rem;font-
 </header>
 
 <main id="contenu">
-<section class="hero">
-  <div class="wrap">
-    <div class="eyebrow">StockValor · Intermédiation commerciale B2B · France</div>
-    <h1>Vos stocks dorment.<br><span class="accent">Leur valeur, non.</span></h1>
-    <p>StockValor accompagne les entreprises dans la valorisation de leurs stocks dormants, surplus et invendus, en les mettant en relation avec des acheteurs professionnels qualifiés.</p>
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap"><div class="hero-content">
+    <h1 id="hero-title">Valorisez vos<br><span class="accent">stocks dormants.</span></h1>
+    <p>Nous mettons en relation les entreprises et des acheteurs professionnels qualifiés pour donner une nouvelle valeur aux stocks inutilisés.</p>
     <div class="hero-actions">
       <a class="cta light" href="#contact" data-intent="vendeur">Vendre un stock</a>
-      <a class="cta outline" href="#contact" data-intent="acheteur">Acheter un stock <span aria-hidden="true">↗</span></a>
+      <a class="cta outline" href="#contact" data-intent="acheteur">Acheter un stock</a>
     </div>
-    <div class="trustline"><span>Réservé aux professionnels</span><span>Sans achat ni stockage par StockValor</span><span>Modalités d’intervention précisées avant engagement</span></div>
-  </div>
+  </div></div>
 </section>
 
 <section id="comment-ca-marche" aria-labelledby="comment-ca-marche-titre">
